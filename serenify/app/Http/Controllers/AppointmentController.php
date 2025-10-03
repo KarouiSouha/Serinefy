@@ -249,6 +249,37 @@ public function getVideoToken(Appointment $appointment)
         'token' => $token->toJWT()
     ]);
 }
+public function patientEndCall(Appointment $appointment)
+{
+    try {
+        // Vérifier que l'utilisateur actuel est bien le patient de ce rendez-vous
+        if ($appointment->patient_id !== Auth::id()) {
+            return response()->json(['message' => 'Unauthorized'], 403);
+        }
 
+        // Vérifier que l'appel est actif
+        if ($appointment->status !== 'active') {
+            return response()->json(['message' => 'This appointment is not currently active'], 400);
+        }
+
+        // Mettre à jour le statut du rendez-vous
+        $appointment->update([
+            'status' => 'completed',
+            'completed_at' => now()
+        ]);
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Call ended successfully',
+            'appointment' => [
+                'id' => $appointment->id,
+                'status' => 'completed'
+            ]
+        ]);
+    } catch (\Exception $e) {
+        Log::error('Error patient ending call: ' . $e->getMessage());
+        return response()->json(['message' => 'Server error', 'error' => $e->getMessage()], 500);
+    }
+}
 
 }

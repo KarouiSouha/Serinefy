@@ -32,10 +32,7 @@ api.interceptors.response.use(
     // Handle 401 Unauthorized - could redirect to login
     if (error.response && error.response.status === 401) {
       console.log('Authentication error', error);
-      // Optional: Clear localStorage and redirect to login
-      // localStorage.removeItem('token');
-      // localStorage.removeItem('user');
-      // window.location.href = '/';
+
     }
     return Promise.reject(error);
   }

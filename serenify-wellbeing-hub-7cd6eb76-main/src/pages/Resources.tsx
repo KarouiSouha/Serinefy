@@ -243,33 +243,13 @@ const Resources: React.FC = () => {
                 ></iframe>
               </div>
             },
-            { 
-              title: "Cohérence cardiaque", 
-              content: <div className="aspect-video bg-black rounded-md">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/X3Wgy8JVdko"
-                  title="Cohérence cardiaque"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            }
           ]
         },
         { 
           title: "Yoga doux pour la relaxation", 
           type: "Vidéo",
           content: <div className="space-y-4">
-            <div className="aspect-video bg-black rounded-md">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/X3Wgy8JVdko"
-                title="Yoga doux pour la relaxation"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+           
             <p className="text-gray-700 dark:text-gray-300">
               Une séance de yoga douce, accessible à tous, pour détendre le corps et l'esprit après une journée stressante.
             </p>
@@ -287,88 +267,11 @@ const Resources: React.FC = () => {
                 ></iframe>
               </div>
             },
-            { 
-              title: "Yoga du soir", 
-              content: <div className="aspect-video bg-black rounded-md">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/AsJLeuA-L14"
-                  title="Yoga du soir"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            },
-            { 
-              title: "Yoga pour le mal de dos", 
-              content: <div className="aspect-video bg-black rounded-md">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/XBaThglHLlE"
-                  title="Yoga pour le mal de dos"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            }
+            
+          
           ]
         },
-        { 
-          title: "Comment pratiquer la pleine conscience", 
-          type: "Vidéo",
-          content: <div className="space-y-4">
-            <div className="aspect-video bg-black rounded-md">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/PY9AcOCqUss"
-                title="Comment pratiquer la pleine conscience"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <p className="text-gray-700 dark:text-gray-300">
-              Découvrez comment intégrer la pleine conscience dans votre quotidien pour réduire le stress et améliorer votre bien-être.
-            </p>
-          </div>,
-          subtopics: [
-            { 
-              title: "Pleine conscience au quotidien", 
-              content: <div className="aspect-video bg-black rounded-md">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/sz-JgzlUEDo"
-                  title="Pleine conscience au quotidien"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            },
-            { 
-              title: "Body scan guidé", 
-              content: <div className="aspect-video bg-black rounded-md">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/9FourBEpQ9I"
-                  title="Body scan guidé"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            },
-            { 
-              title: "Méditation de pleine conscience en marchant", 
-              content: <div className="aspect-video bg-black rounded-md">
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/QJAcZKBfPIk"
-                  title="Méditation de pleine conscience en marchant"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            }
-          ]
-        }
+        
       ]
     },
     {

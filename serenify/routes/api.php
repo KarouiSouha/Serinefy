@@ -38,6 +38,7 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 Route::middleware('auth:sanctum')->get('/appointments/{appointment}/video-token', [AppointmentController::class, 'getVideoToken']);
 
+Route::post('/appointments/{appointment}/patient-end-call', [AppointmentController::class, 'patientEndCall']);
 
 Route::middleware('auth:sanctum')->group(function () {
     // Mood entries
@@ -64,7 +65,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::prefix('therapist')->group(function () {
         Route::get('/dashboard', [TherapistController::class, 'dashboard']);
         Route::post('/online-status', [TherapistController::class, 'updateOnlineStatus']);
-        Route::post('/appointments/{appointment}/end-call', [TherapistController::class, 'endVideoCall']);
+        Route::post('/appointments/{appointment}/end-call', [TherapistController::class, 'endCall']);
         Route::post('/appointments/{appointment}/start-call', [TherapistController::class, 'startVideoCall']);
         Route::put('/appointments/{appointment}', [TherapistController::class, 'updateAppointment']);
     });});

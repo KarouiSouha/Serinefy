@@ -32,51 +32,7 @@ export const fetchDashboardData = async (): Promise<Therapist[]> => {
     throw error;
   }
 };
-// // API pour changer le statut en ligne/hors ligne
-// export const updateOnlineStatus = async (isOnline): Promise<Therapist[]> => {
-//   try {
-//     const response = await axios.post('http://localhost:8000/api/therapist/online-status', { isOnline });
-//     return response.data;
-//   } catch (error) {
-//     console.error('Erreur lors de la mise à jour du statut en ligne:', error);
-//     throw error;
-//   }
-// };
 
-// // API pour démarrer un appel
-// export const startCall = async (appointmentId, callType) => {
-//   try {
-//     const response = await axios.post(`/api/therapist/appointments/${appointmentId}/start-call`, { callType });
-//     return response.data;
-//   } catch (error) {
-//     console.error('Erreur lors du démarrage de l\'appel:', error);
-//     throw error;
-//   }
-// };
-
-// // API pour terminer un appel
-// export const endCall = async (appointmentId) => {
-//   try {
-//     const response = await axios.post(`/api/therapist/appointments/${appointmentId}/end-call`);
-//     return response.data;
-//   } catch (error) {
-//     console.error('Erreur lors de la fin de l\'appel:', error);
-//     throw error;
-//   }
-// };
-
-// // API pour mettre à jour les détails d'un rendez-vous
-// export const updateAppointment = async (appointmentId, updates) => {
-//   try {
-//     const response = await axios.put(`/api/therapist/appointments/${appointmentId}`, updates);
-//     return response.data;
-//   } catch (error) {
-//     console.error('Erreur lors de la mise à jour du rendez-vous:', error);
-//     throw error;
-//   }
-// };
-
-// API : mise à jour du statut en ligne
 export const updateOnlineStatus = async (isOnline) => {
   try {
     const response = await api.post('/therapist/online-status', { isOnline });

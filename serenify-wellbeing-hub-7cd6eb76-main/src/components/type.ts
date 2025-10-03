@@ -1,28 +1,4 @@
-// export type AppointmentType = 'video' | 'phone' | 'chat';
-// export type AppointmentStatus = 'pending' | 'confirmed' | 'cancelled' | 'completed';
 
-// export interface AppointmentData {
-//   therapistId: number;
-//   date: string;
-//   time: string;
-//   type: AppointmentType;
-//   status?: AppointmentStatus;
-//   notes?: string;
-// }
-// export interface Appointment extends AppointmentData {
-//   id: number;
-// }
-// export interface Therapist {
-//   id: number;
-//   name: string;
-//   specialty: string;
-//   experience?: string;
-//   availability: string[];
-//   avatarUrl: string;
-//   bio: string;
-//   phone?: string;
-// }
-// @/components/type.ts
 
 export type AppointmentType = 'video' | 'phone' | 'chat';
 export type AppointmentStatus = 'pending' | 'confirmed' | 'cancelled' | 'completed';
@@ -51,10 +27,10 @@ export interface Appointment {
   type: string;
   notes?: string;
   therapist?: Therapist;
+    onInitiateCall: (therapistId: number, type: 'video' | 'phone') => void;
+  onEndCall: (appointmentId: number) => void;
 }
-// export interface Appointment extends AppointmentData {
-//   id: number; // id est obligatoire pour un rendez-vous existant
-// }
+
 
 export interface Therapist {
   id: number;
@@ -75,37 +51,3 @@ export interface AppointmentResponse {
   type: string;
   status: string;
 }
-// export type AppointmentType = 'video' | 'phone' | 'chat';
-// export type AppointmentStatus = 'pending' | 'confirmed' | 'cancelled' | 'completed';
-
-// export interface AppointmentData {
-//   therapistId: number;
-//   date: string;
-//   time: string;
-//   type: AppointmentType;
-//   status?: AppointmentStatus;
-//   notes?: string;
-// }
-
-// export interface Appointment extends AppointmentData {
-//   id: number;
-
-// }
-// // interface Appointment {
-// //   id: number;
-// //   therapistId: number;
-// //   date: string;
-// //   time: string;
-// //   type: string;
-// //   status: string;
-// // }
-// export interface Therapist {
-//   id: number;
-//   name: string;
-//   specialty: string;
-//   experience?: string;
-//   availability: string[];
-//   avatarUrl: string;
-//   bio: string;
-//   phone?: string;
-// }
